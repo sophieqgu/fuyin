@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Models from "./pages/Models";
-import ModelDetail from "./components/ModelDetail";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Home from "@/pages/Home";
+import Models from "@/pages/Models";
+import ModelDetail from "@/components/ModelDetail";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
 
 function App() {
 	return (

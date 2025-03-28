@@ -16,47 +16,44 @@ const Footer = () => {
 			<Container maxWidth="lg">
 				<Grid container spacing={4} justifyContent="space-between">
 					<Grid item xs={12} sm={6} md={3}>
-						<Typography variant="h6" color="text.primary" gutterBottom>
-							Fuyin
-						</Typography>
 						<Typography variant="body2" color="text.secondary">
-							Innovative hearing solutions for better living.
+							创新听力解决方案，品质生活之选
 						</Typography>
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
 						<Typography variant="h6" color="text.primary" gutterBottom>
-							Products
+							产品
 						</Typography>
 						<Link href="/models" color="inherit" display="block">
-							All Models
+							全部型号
 						</Link>
 						<Link href="/models/premium" color="inherit" display="block">
-							Premium Series
+							尊享系列
 						</Link>
 						<Link href="/models/essential" color="inherit" display="block">
-							Essential Series
+							基础系列
 						</Link>
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
 						<Typography variant="h6" color="text.primary" gutterBottom>
-							Company
+							公司
 						</Typography>
 						<Link href="/about" color="inherit" display="block">
-							About Us
+							关于我们
 						</Link>
 						<Link href="/contact" color="inherit" display="block">
-							Contact
+							联系我们
 						</Link>
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
 						<Typography variant="h6" color="text.primary" gutterBottom>
-							Legal
+							法律条款
 						</Typography>
 						<Link href="/privacy" color="inherit" display="block">
-							Privacy Policy
+							隐私政策
 						</Link>
 						<Link href="/terms" color="inherit" display="block">
-							Terms of Use
+							用户协议
 						</Link>
 					</Grid>
 				</Grid>
@@ -66,7 +63,7 @@ const Footer = () => {
 					align="center"
 					sx={{ mt: 4 }}
 				>
-					© {new Date().getFullYear()} Fuyin. All rights reserved.
+					© {new Date().getFullYear()} 新疆福音 版权所有
 				</Typography>
 			</Container>
 		</Box>

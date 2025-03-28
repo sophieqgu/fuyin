@@ -14,10 +14,10 @@ import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
 const pages = [
-	{ name: "Home", path: "/" },
-	{ name: "Models", path: "/models" },
-	{ name: "About", path: "/about" },
-	{ name: "Contact", path: "/contact" },
+	{ name: "首页", path: "/" },
+	{ name: "型号", path: "/models" },
+	{ name: "关于我们", path: "/about" },
+	{ name: "联系我们", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -112,7 +112,7 @@ const Navbar = () => {
 							textDecoration: "none",
 						}}
 					>
-						Fuyin
+						福音
 					</Typography>
 
 					<Box

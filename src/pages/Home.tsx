@@ -1,5 +1,7 @@
-import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import { models } from "./Models";
+import Carousel from "@/components/Carousel";
 
 const Home = () => {
 	return (
@@ -22,11 +24,10 @@ const Home = () => {
 								gutterBottom
 								sx={{ fontWeight: "bold" }}
 							>
-								Experience Sound Like Never Before
+								聆听前所未有的清晰世界
 							</Typography>
 							<Typography variant="h5" paragraph>
-								Discover our revolutionary hearing aids that combine
-								cutting-edge technology with elegant design.
+								探索我们的革命性助听器，尖端科技与优雅设计的完美融合
 							</Typography>
 							<Button
 								component={RouterLink}
@@ -36,83 +37,53 @@ const Home = () => {
 								size="large"
 								sx={{ mt: 2 }}
 							>
-								Explore Our Models
+								探索精选机型
 							</Button>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
 
-			{/* Features Section */}
+			{/* Models Carousel Section */}
 			<Container maxWidth="lg" sx={{ mb: 8 }}>
-				<Grid container spacing={4}>
-					<Grid item xs={12} md={4}>
-						<Paper
+				<Carousel
+					navigation
+					autoPlay={false}
+					animation="slide"
+					IndicatorIconProps={{ style: { color: "primary.main" } }}
+				>
+					{models.map((model) => (
+						<Box
+							key={model.id}
+							component={RouterLink}
+							to={`/models/${model.id}`}
 							sx={{
-								p: 3,
+								width: "100%",
 								height: "100%",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "center",
-								textAlign: "center",
+								objectFit: "cover",
+								borderRadius: 2,
+								textDecoration: "none",
+								transition: "all 0.3s ease",
 							}}
 						>
-							<Typography variant="h5" gutterBottom>
-								Advanced Technology
+							<Box component="img" src={model.image} alt={model.name} />
+							<Typography
+								variant="h6"
+								align="center"
+								sx={{ mt: 2, color: "primary.light" }}
+							>
+								{model.name}
 							</Typography>
-							<Typography>
-								State-of-the-art noise reduction and sound processing
-								technology.
-							</Typography>
-						</Paper>
-					</Grid>
-					<Grid item xs={12} md={4}>
-						<Paper
-							sx={{
-								p: 3,
-								height: "100%",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "center",
-								textAlign: "center",
-							}}
-						>
-							<Typography variant="h5" gutterBottom>
-								Comfort & Style
-							</Typography>
-							<Typography>
-								Ergonomic design that combines comfort with elegant aesthetics.
-							</Typography>
-						</Paper>
-					</Grid>
-					<Grid item xs={12} md={4}>
-						<Paper
-							sx={{
-								p: 3,
-								height: "100%",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "center",
-								textAlign: "center",
-							}}
-						>
-							<Typography variant="h5" gutterBottom>
-								Personalized Care
-							</Typography>
-							<Typography>
-								Custom fitting and ongoing support for optimal hearing
-								experience.
-							</Typography>
-						</Paper>
-					</Grid>
-				</Grid>
+						</Box>
+					))}
+				</Carousel>
 			</Container>
 
 			{/* CTA Section */}
 			<Box sx={{ bgcolor: "grey.100", py: 8 }}>
 				<Container maxWidth="lg">
 					<Typography variant="h3" align="center" gutterBottom>
-						Ready to Transform Your Hearing?
+						重塑听觉体验，即刻启程
 					</Typography>
 					<Typography
 						variant="h6"
@@ -120,7 +91,7 @@ const Home = () => {
 						color="text.secondary"
 						paragraph
 					>
-						Schedule a consultation with our hearing experts today.
+						立即预约听力专家咨询，开启清晰聆听之旅
 					</Typography>
 					<Box sx={{ textAlign: "center", mt: 3 }}>
 						<Button
@@ -129,7 +100,7 @@ const Home = () => {
 							variant="contained"
 							size="large"
 						>
-							Contact Us
+							预约咨询
 						</Button>
 					</Box>
 				</Container>
